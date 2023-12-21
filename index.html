@@ -192,6 +192,33 @@
 </div>    
 </div>    
  
+<div class="emailenviar">
+    <form id="myForm" action="https://formspree.io/f/mrgnzypa" method="post" class="sendemail" target="formspreePopup">
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" name="_replyto" placeholder="Tu correo electrónico" required>
+        <label for="message">Mensaje:</label>
+        <textarea name="message" placeholder="Escribe tu mensaje" required></textarea>
+        <input type="submit" value="Enviar" onclick="submitFormAndClose()">
+    </form>
+</div>
+
+<script>
+    function submitFormAndClose() {
+        // Abre la nueva pestaña
+        var formspreePopup = window.open('', 'formspreePopup');
+        document.getElementById("myForm").target = 'formspreePopup';
+
+        // Envía el formulario
+        document.getElementById("myForm").submit();
+
+        // Espera un momento y luego cierra la pestaña secundaria
+        setTimeout(function () {
+            formspreePopup.close();
+        }, 0); // Ajusta el tiempo según sea necesario
+    }
+</script>
+
+
 <div class="social-links">
     <a href="https://www.facebook.com/pkmnawakening" target="_blank"><i class="fa fa-facebook"></i></a>
     <a href="https://www.instagram.com/kidfates/" target="_blank"><i class="fa fa-instagram"></i></a>
