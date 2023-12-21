@@ -381,16 +381,16 @@ hr{
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    
+    box-sizing: border-box; /* Agregado para incluir el padding y border en el ancho total */
 }
 
-.emailenviar-label {
+.sendemail label {
     display: block;
     margin-bottom: 8px;
 }
 
-.emailenviar-input,
-.emailenviar-textarea {
+.sendemail input,
+.sendemail textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 16px;
@@ -399,14 +399,25 @@ hr{
     box-sizing: border-box;
 }
 
-.emailenviar-input[type="submit"] {
+.sendemail input[type="submit"] {
     background-color: #39105afd;
     color: #fff;
     cursor: pointer;
 }
 
-.emailenviar-input[type="submit"]:hover {
+.sendemail input[type="submit"]:hover {
     background-color: #9145a0;
+}
+
+/* Estilos responsivos para dispositivos móviles */
+@media (max-width: 600px) {
+    .emailenviar {
+        height: auto;
+    }
+
+    .sendemail {
+        padding: 10px;
+    }
 }
 
 
