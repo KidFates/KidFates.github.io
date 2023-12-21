@@ -384,13 +384,13 @@ hr{
     
 }
 
-.emailenviar label {
+.emailenviar-label {
     display: block;
     margin-bottom: 8px;
 }
 
-.emailenviar input,
-.emailenviar textarea {
+.emailenviar-input,
+.emailenviar-textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 16px;
@@ -399,13 +399,13 @@ hr{
     box-sizing: border-box;
 }
 
-.emailenviar input[type="submit"] {
+.emailenviar-input[type="submit"] {
     background-color: #39105afd;
     color: #fff;
     cursor: pointer;
 }
 
-.emailenviar input[type="submit"]:hover {
+.emailenviar-input[type="submit"]:hover {
     background-color: #9145a0;
 }
 
