@@ -4,7 +4,7 @@ var singleCheckWrap = "<div class='characterCheckWrap'></div>";
 var selectAllWrap = "<div class='selectAllWrap'></div>";
 var gameFe = [	["tier", 0, ""],
                 ["pokemon", 141, "Pokémon"],
-                ["trainers", 19, "Personajes"],
+                ["trainers", 39, "Personajes"],
                 ];
 
 var currentGame;
