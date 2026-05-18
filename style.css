@@ -7,7 +7,8 @@
     background: linear-gradient(rgba(0, 0, 0, 0.5),#39105afd),url(images/banner.jpg);
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    min-height: 100vh; /* Cambiado de height a min-height para evitar desbordes */
+    padding-bottom: 50px; /* Espacio extra al final para que respire el contenido */
 }
 .logo{
     width: 140px;
@@ -29,7 +30,17 @@
     font-style: italic;
 }
 .banner-btn{
-    margin: 70px auto 0;
+    margin: 15px auto 0; /* Margen reducido */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+/* Reajuste leve del tamaño para que entren bien en las cajas */
+.banner-btn a {
+    width: 140px; /* Reducido ligeramente de 150px */
+    padding: 10px 0; /* Reducido ligeramente de 12px */
+    font-size: 14px;
 }
 .banner-btn a{
     width: 150px;
@@ -463,7 +474,88 @@ hr{
     }
 }
 
+/* --- CONTENEDORES DE UNIFICACIÓN DE DESCARGAS --- */
 
+.download-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    margin: 40px auto 0;
+    width: 90%;
+    max-width: 1100px;
+    box-sizing: border-box;
+}
+
+.download-box {
+    background: rgba(0, 0, 0, 0.55);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    padding: 25px;
+    flex: 1;
+    min-width: 290px;
+    box-sizing: border-box;
+}
+
+/* Destacado especial para la secuela */
+.game-two {
+    border-color: #9145a0; /* Tono morado brillante de tu paleta */
+    box-shadow: 0 0 15px rgba(145, 69, 160, 0.6);
+}
+
+.download-box h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.version-group {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.version-group h3 {
+    font-size: 15px;
+    color: #ddd;
+    margin-bottom: 5px;
+    font-weight: 300;
+}
+
+/* Estilos de los enlaces complementarios (PDF, Tierlist...) */
+.extra-links {
+    margin-top: 25px;
+    border-top: 1px dashed rgba(255, 255, 255, 0.3);
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.extra-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.extra-links a:hover {
+    color: #9145a0;
+    text-decoration: underline;
+}
+
+/* Ajuste Responsivo para Móviles en base a tus breakpoints (770px) */
+@media screen and (max-width: 770px) {
+    .download-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .download-box {
+        width: 100%;
+        max-width: 400px;
+    }
+}
 
 
 
